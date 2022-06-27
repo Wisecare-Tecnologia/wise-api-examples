@@ -31,7 +31,7 @@ export class AppComponent {
     this.wiseapi = WiseApi({
       baseUrl: 'https://session-manager.homolog.v4h.cloud/api',
       domain: 'conf.homolog.v4h.cloud',
-      apiKey: '4796a5db-7395-45a1-9711-f24b80d5b9f2'
+      apiKey: '******-****-****-*****-**********'
     }).then((res) => {
       this.wiseapi = res;
       this.wiseapi.prescription.listCertificates().then((certs) => {
@@ -70,9 +70,9 @@ export class AppComponent {
     formData.append('crm', '1231231');
     formData.append('crmUF', 'PB');
     formData.append('type', 'BASIC');
-    formData.append('org', 'sas');
-    formData.append('orgUnit', 'geral');
-    formData.append('user', 'sasuser');
+    formData.append('org', '***');
+    formData.append('orgUnit', '***');
+    formData.append('user', '*****');
     formData.append('certificate', this.certificates[0].base64Certificate);
     const res = await this.wiseapi.prescription.createCustom(formData);
     this.prescriptionId = res.id
