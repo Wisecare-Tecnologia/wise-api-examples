@@ -1,0 +1,33 @@
+<div>
+  <h1>{{title}}</h1>
+  <!-- <button (click)="startConf()">Iniciar conferência</button> -->
+  <!-- <div id="meet"></div> -->
+  <div class="text-center">
+    <input class="form-control" type="file" 
+            (change)="onChange($event)">
+    <button (click)="onUpload()" 
+        class="btn btn-success">
+        Upload
+    </button>
+
+    <p>Certificates:</p>
+    <ul id="certificates">
+      <li *ngFor="let item of certificates">
+        {{ item.id }}
+      </li>
+    </ul>
+
+    <p>Data to sign: {{ prescriptionDataToSign }}</p>
+
+    <button (click)="sign()" 
+      class="btn btn-success">
+      Sign
+    </button>
+
+    <button (click)="download()" 
+      class="btn btn-success">
+      Download
+    </button>
+
+  </div>
+</div>
